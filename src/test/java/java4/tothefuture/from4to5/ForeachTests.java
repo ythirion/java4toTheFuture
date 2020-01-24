@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java4.tothefuture.from4to5.ForEach.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
@@ -18,8 +19,8 @@ public class ForeachTests {
         persons.add(new Person(Sex.Female));
         persons.add(new Person(Sex.Male));
 
-        assertThat(ForEach.countNumberOfMaleOld(persons), equalTo(3));
-        assertThat(ForEach.countNumberOfMaleOld(persons), equalTo(ForEach.countNumberOfMaleNew(persons)));
+        assertThat(countNumberOfMaleOld(persons), equalTo(3));
+        assertThat(countNumberOfMaleOld(persons), equalTo(countNumberOfMaleNew(persons)));
     }
 
 }
