@@ -1,5 +1,6 @@
 package java4.tothefuture.from7to8;
 
+import lombok.var;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import static org.junit.Assert.assertThat;
 public class StreamsTest {
     @Test
     public void averageMaleSalaryTest() {
-        List<Person> persons = new ArrayList<>();
+        var persons = new ArrayList<Person>();
         persons.add(new Person(2300, "Michel", Sex.Male));
         persons.add(new Person(2500, "Fabrice", Sex.Male));
         persons.add(new Person(2700, "Bernard", Sex.Male));
@@ -23,7 +24,7 @@ public class StreamsTest {
 
     @Test
     public void girlPowerSalaryTest() {
-        List<Person> persons = new ArrayList<>();
+        var persons = new ArrayList<Person>();
         persons.add(new Person(6000, "Sofia", Sex.Female));
         persons.add(new Person(9000, "Karen", Sex.Female));
         persons.add(new Person(4500, "Daniela", Sex.Female));

@@ -1,6 +1,5 @@
 package java4.tothefuture.from7to8;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +12,7 @@ public class Streams {
             return 0;
         }
 
-        int sum = 0;
+        double sum = 0;
         int numOfMen = 0;
 
         for(Person person : persons) {
