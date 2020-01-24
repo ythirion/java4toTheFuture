@@ -2,17 +2,22 @@ package java4.tothefuture.from7to8;
 
 public class Streams {
 
-    public static int averAge(Person[] persons) {
+    // TODO : Use Stream API Filter + ForEach
+    public static int averageMaleSalary(Person[] persons) {
         if (persons == null || persons.length == 0) {
             return 0;
         }
 
         int sum = 0;
+        int numOfMen = 0;
 
         for(Person person : persons) {
-            sum += person.getAge();
+            if (person.getSex() == Sex.Male) {
+                sum += person.getSalary();
+                numOfMen++;
+            }
         }
 
-        return sum/persons.length;
+        return numOfMen == 0 ? 0 : sum/numOfMen;
     }
 }
