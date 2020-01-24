@@ -1,10 +1,12 @@
 package java4.tothefuture.from7to8;
 
+import java.util.Arrays;
+
 public class Streams {
 
-    // TODO : Use Stream API Filter + ForEach
-    public static int averageMaleSalary(Person[] persons) {
-        if (persons == null || persons.length == 0) {
+    // TODO : Use Stream API Filter + Map + sum
+    public static double averageMaleSalary(Person[] persons) {
+        if (persons == null) {
             return 0;
         }
 
@@ -19,5 +21,16 @@ public class Streams {
         }
 
         return numOfMen == 0 ? 0 : sum/numOfMen;
+    }
+
+    public static double averageMaleSalaryNice(Person[] persons) {
+        if (persons == null) {
+            return 0;
+        }
+
+        return Arrays.stream(persons)
+                .filter(person -> person.getSex() == Sex.Male)
+                .mapToInt(Person::getSalary)
+                .average().orElse(0);
     }
 }

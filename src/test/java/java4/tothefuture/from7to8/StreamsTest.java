@@ -12,11 +12,11 @@ public class StreamsTest {
         Person[] persons = {
                 new Person(2300, "Michel", Sex.Male),
                 new Person(2500, "Fabrice", Sex.Male),
-                new Person(2800, "Fabrice", Sex.Male),
+                new Person(2700, "Fabrice", Sex.Male),
                 new Person(4500, "Daniela", Sex.Female)
         };
 
-        assertThat(averageMaleSalary(persons), equalTo(2533));
+        assertThat(averageMaleSalary(persons), equalTo(2500d));
     }
 
     @Test
@@ -27,13 +27,13 @@ public class StreamsTest {
                 new Person(4500, "Daniela", Sex.Female)
         };
 
-        assertThat(averageMaleSalary(persons), equalTo(0));
+        assertThat(averageMaleSalary(persons), equalTo(0d));
     }
 
     @Test
     public void averageNullOrEmptyTest() {
         Person[] persons = { };
-        assertThat(averageMaleSalary(persons), equalTo(0));
-        assertThat(averageMaleSalary(null), equalTo(0));
+        assertThat(averageMaleSalary(persons), equalTo(0d));
+        assertThat(averageMaleSalary(null), equalTo(0d));
     }
 }
