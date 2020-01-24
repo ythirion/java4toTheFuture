@@ -1,0 +1,2 @@
+Hello world Java is very cool
+but Clojure is awesome
