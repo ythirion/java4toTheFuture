@@ -8,16 +8,16 @@ public class GenericsTests {
 
     @Test
     public void testAddInt() {
-        assertThat(Generics.addInt(4, 4), equalTo(8));
+        assertThat(Generics.addInt(4, 4), equalTo(8.0));
     }
 
     @Test
     public void testAddDouble() {
-        assertThat(Generics.addDouble(4, 4), equalTo(8));
+        assertThat(Generics.addDouble(4, 4), equalTo(8.0));
     }
 
     @Test
     public void testAddLong() {
-        assertThat(Generics.addLong(4, 4), equalTo(8));
+        assertThat(Generics.addLong(4, 4), equalTo(8.0));
     }
 }
