@@ -1,10 +1,8 @@
 package java4.tothefuture.from7to8;
 
-import lombok.var;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static java4.tothefuture.from7to8.Streams.averageMaleSalary;
 import static org.hamcrest.CoreMatchers.equalTo;

@@ -24,9 +24,14 @@ public class ForEach {
      */
     public static int countNumberOfMaleNew(List<Person> population){
         int numberOfMale = 0;
+        Iterator<Person> iterator = population.iterator();
 
-        for(Person p : population){
-            numberOfMale += p.getSex() == Sex.Male ? 1 : 0;
+        while(iterator.hasNext()){
+            Person current = iterator.next();
+
+            if(current.getSex() == Sex.Male){
+                numberOfMale++;
+            }
         }
         return numberOfMale;
     }

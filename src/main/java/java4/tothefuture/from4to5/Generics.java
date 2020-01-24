@@ -14,6 +14,6 @@ public class Generics {
     }
 
     /**
-     * TODO: Creat a generic add method.
+     * TODO: Create a generic add method.
      */
 }
