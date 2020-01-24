@@ -11,14 +11,15 @@ import static org.junit.Assert.assertThat;
 public class ForeachTests {
 
     @Test
-    public void testcountNumberOfMale() {
-        List<Person> persons = new ArrayList<Person>();
+    public void testCountNumberOfMale() {
+        List<Person> persons = new ArrayList<>();
         persons.add(new Person(Sex.Male));
         persons.add(new Person(Sex.Male));
         persons.add(new Person(Sex.Female));
         persons.add(new Person(Sex.Male));
 
-        assertThat(ForEach.countNumberOfMale(persons), equalTo(3));
+        assertThat(ForEach.countNumberOfMaleOld(persons), equalTo(3));
+        assertThat(ForEach.countNumberOfMaleOld(persons), equalTo(ForEach.countNumberOfMaleNew(persons)));
     }
 
 }

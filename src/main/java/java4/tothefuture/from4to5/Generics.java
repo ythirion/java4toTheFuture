@@ -13,5 +13,7 @@ public class Generics {
         return a + b;
     }
 
-    //TODO : add Generic Add method
+    /**
+     * TODO: Creat a generic add method.
+     */
 }
