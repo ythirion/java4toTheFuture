@@ -11,10 +11,17 @@ public class StreamsTest {
     public void averAgeTest() {
         Person[] persons = {
                 new Person(10, "Michel"),
-                new Person(10, "Fabrice"),
-                new Person(10, "Robert")
+                new Person(11, "Fabrice"),
+                new Person(12, "Robert")
         };
 
-        assertThat(averAge(persons), equalTo(10));
+        assertThat(averAge(persons), equalTo(11));
+    }
+
+    @Test
+    public void averAgeNullOrEmptyTest() {
+        Person[] persons = { };
+        assertThat(averAge(persons), equalTo(0));
+        assertThat(averAge(null), equalTo(0));
     }
 }
