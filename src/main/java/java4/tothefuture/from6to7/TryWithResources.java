@@ -26,10 +26,10 @@ public class TryWithResources {
      */
     public static String printWriterNew() {
         StringWriter sw = new StringWriter();
-        try(PrintWriter pw = new PrintWriter(sw);) {
-            pw.write("Hello, world!");
-            return sw.toString();
-        }
+        PrintWriter pw = new PrintWriter(sw);
+        pw.write("Hello, world!");
+        pw.close();
+        return sw.toString();
     }
 
     private static List<String> words(String line) {
@@ -59,12 +59,18 @@ public class TryWithResources {
      * TODO: Do the same as {@link TryWithResources#readWordsOld(File)} but with try/resources.
      */
     public static List<String> readWordsNew(File file) throws FileNotFoundException {
-        try (Scanner scanner = new Scanner(file)) {
-            List<String> words = new ArrayList<String>();
+        Scanner scanner = null;
+        List<String> words = new ArrayList<String>();
+        try {
+            scanner = new Scanner(file);
             while (scanner.hasNext()) {
                 words.addAll(words(scanner.nextLine()));
             }
             return words;
+        } finally {
+            if (scanner != null) {
+                scanner.close();
+            }
         }
     }
 }
