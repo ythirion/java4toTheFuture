@@ -14,7 +14,6 @@ public class TryWithResourcesTest {
     @Test
     public void testSimpleTryWithResources() {
         assertThat(printWriter(), equalTo("Hello, world!"));
-        assertThat(printWriter(), equalTo(printWriter()));
     }
 
     @Test
@@ -22,6 +21,5 @@ public class TryWithResourcesTest {
         File input = new File(getClass().getClassLoader().getResource("input.txt").getFile());
         List<String> expected = Arrays.asList("Hello", "world", "Java", "is", "very", "cool", "but", "Clojure", "is", "awesome");
         assertThat(readWords(input), equalTo(expected));
-        assertThat(readWords(input), equalTo(readWords(input)));
     }
 }
