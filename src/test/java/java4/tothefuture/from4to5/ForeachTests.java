@@ -19,8 +19,6 @@ public class ForeachTests {
         persons.add(new Person(Sex.Female));
         persons.add(new Person(Sex.Male));
 
-        assertThat(countNumberOfMaleOld(persons), equalTo(3));
-        assertThat(countNumberOfMaleOld(persons), equalTo(countNumberOfMaleNew(persons)));
+        assertThat(countNumberOfMale(persons), equalTo(3));
     }
-
 }

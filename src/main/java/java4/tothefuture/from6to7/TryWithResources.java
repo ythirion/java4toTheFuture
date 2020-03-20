@@ -10,67 +10,26 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TryWithResources {
-    /**
-     * This function uses a PrintWriter to write in a StringWriter the content "Hello, world!".
-     */
-    public static String printWriterOld() {
+
+    public static String printWriter() {
         StringWriter sw = new StringWriter();
-        PrintWriter pw = new PrintWriter(sw);
-        pw.write("Hello, world!");
-        pw.close();
-        return sw.toString();
+        try(PrintWriter pw = new PrintWriter(sw);) {
+            pw.write("Hello, world!");
+            return sw.toString();
+        }
     }
 
-    /**
-     * TODO: Do the same as {@link TryWithResources#printWriterOld()} but with try/resources.
-     */
-    public static String printWriterNew() {
-        StringWriter sw = new StringWriter();
-        PrintWriter pw = new PrintWriter(sw);
-        pw.write("Hello, world!");
-        pw.close();
-        return sw.toString();
+    public static List<String> readWords(File file) throws FileNotFoundException {
+        try (Scanner scanner = new Scanner(file)) {
+            List<String> words = new ArrayList<>();
+            while (scanner.hasNext()) {
+                words.addAll(words(scanner.nextLine()));
+            }
+            return words;
+        }
     }
 
     private static List<String> words(String line) {
         return Arrays.asList(line.trim().split("\\s+"));
-    }
-
-    /**
-     * This function read the given file and extracts the words from it.
-     */
-    public static List<String> readWordsOld(File file) throws FileNotFoundException {
-        Scanner scanner = null;
-        List<String> words = new ArrayList<String>();
-        try {
-            scanner = new Scanner(file);
-            while (scanner.hasNext()) {
-                words.addAll(words(scanner.nextLine()));
-            }
-            return words;
-        } finally {
-            if (scanner != null) {
-                scanner.close();
-            }
-        }
-    }
-
-    /**
-     * TODO: Do the same as {@link TryWithResources#readWordsOld(File)} but with try/resources.
-     */
-    public static List<String> readWordsNew(File file) throws FileNotFoundException {
-        Scanner scanner = null;
-        List<String> words = new ArrayList<String>();
-        try {
-            scanner = new Scanner(file);
-            while (scanner.hasNext()) {
-                words.addAll(words(scanner.nextLine()));
-            }
-            return words;
-        } finally {
-            if (scanner != null) {
-                scanner.close();
-            }
-        }
     }
 }
