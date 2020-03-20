@@ -8,7 +8,7 @@ public class ForEach {
     /**
      * TODO: use the foreach keyword.
      */
-    public static int countNumberOfMaleOld(List<Person> population){
+    public static int countNumberOfMale(List<Person> population){
         int numberOfMale = 0;
         Iterator<Person> iterator = population.iterator();
 
