@@ -13,15 +13,13 @@ import static org.junit.Assert.assertThat;
 public class TryWithResourcesTest {
     @Test
     public void testSimpleTryWithResources() {
-        assertThat(printWriterOld(), equalTo("Hello, world!"));
-        assertThat(printWriterNew(), equalTo(printWriterOld()));
+        assertThat(printWriter(), equalTo("Hello, world!"));
     }
 
     @Test
     public void testTryWithResourcesAndFinally() throws Exception {
         File input = new File(getClass().getClassLoader().getResource("input.txt").getFile());
         List<String> expected = Arrays.asList("Hello", "world", "Java", "is", "very", "cool", "but", "Clojure", "is", "awesome");
-        assertThat(readWordsOld(input), equalTo(expected));
-        assertThat(readWordsOld(input), equalTo(readWordsNew(input)));
+        assertThat(readWords(input), equalTo(expected));
     }
 }

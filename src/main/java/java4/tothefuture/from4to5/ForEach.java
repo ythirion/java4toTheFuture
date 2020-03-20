@@ -5,24 +5,10 @@ import java.util.List;
 
 public class ForEach {
 
-    public static int countNumberOfMaleOld(List<Person> population){
-        int numberOfMale = 0;
-        Iterator<Person> iterator = population.iterator();
-
-        while(iterator.hasNext()){
-            Person current = iterator.next();
-
-            if(current.getSex() == Sex.Male){
-                numberOfMale++;
-            }
-        }
-        return numberOfMale;
-    }
-
     /**
-     * TODO: Do the same as {@link ForEach#countNumberOfMaleOld(List)} but with foreach.
+     * TODO: use the foreach keyword.
      */
-    public static int countNumberOfMaleNew(List<Person> population){
+    public static int countNumberOfMaleOld(List<Person> population){
         int numberOfMale = 0;
         Iterator<Person> iterator = population.iterator();
 

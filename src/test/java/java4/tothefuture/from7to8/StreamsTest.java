@@ -5,5 +5,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class StreamsTest {
-
+    /**
+     * TODO: Write test cases.
+     */
 }
