@@ -10,3 +10,4 @@ https://dzone.com/articles/jdk-11-new-default-collection-method-toarrayintfun
 
 https://openjdk.java.net/groups/net/httpclient/intro.html
 
+https://www.dariawan.com/tutorials/java/java-11-new-methods-path-and-files/
