@@ -1,8 +1,5 @@
 package tothefuture;
 
-import java.text.NumberFormat;
-import java.util.Locale;
-
 public class SwitchExpressions {
 
     public static void main(String[] args) {
