@@ -6,7 +6,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import static java.lang.System.getProperty;
-import static java.nio.charset.Charset.defaultCharset;
 
 public class FilesWriteRead {
 
