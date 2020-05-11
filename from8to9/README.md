@@ -31,3 +31,9 @@ Today we have lots of `jar` or `jmod` files instead of single `rt.jar`
 > [jmod docs](https://docs.oracle.com/javase/9/tools/jmod.htm#JSWOR-GUID-0A0BDFF6-BE34-461B-86EF-AAC9A555E2AE)
 
 ![](jmods-vs-rt.jar.png)
+
+> **Note** 
+>
+> Please consider that you might need to configure your module and set the appropriate JDK version and language level in your IDE
+>
+> Maven settings should work by default, but you never know.
